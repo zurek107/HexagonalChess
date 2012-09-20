@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+		<meta charset="utf-8" /> 
+		<title>Hexagen Chess v1.0 BETA</title>
+		
+		<script type="text/javascript" src="Raphael.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="Chess.js"></script>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="500">
+	<script type="text/javascript">
+	//<![CDATA[
+		var board = new Board(800);
+
+		var pieces = new Array();
+		pieces[0] = new Pawn('b', 1, board, 1);
+		pieces[1] = new Pawn('c', 2, board, 1);
+		pieces[2] = new Pawn('d', 3, board, 1);
+		pieces[3] = new Pawn('e', 4, board, 1);
+		pieces[4] = new Pawn('f', 5, board, 1);
+		pieces[5] = new Pawn('g', 5, board, 1);
+		pieces[6] = new Pawn('h', 5, board, 1);
+		pieces[7] = new Pawn('i', 5, board, 1);
+		pieces[8] = new Pawn('k', 5, board, 1);
+		
+		pieces[9] = new Rook('c', 1, board, 1);
+		pieces[10] = new Rook('i', 4, board, 1);
+		
+		pieces[11] = new Knight('d', 1, board, 1);
+		pieces[12] = new Knight('h', 3, board, 1);
+		
+		pieces[13] = new Bishop('f', 1, board, 1);
+		pieces[14] = new Bishop('f', 2, board, 1);
+		pieces[15] = new Bishop('f', 3, board, 1);
+
+		pieces[16] = new Queen('e', 1, board, 1);
+		pieces[17] = new King('g', 2, board, 1);
+		
+		pieces[18] = new Pawn('b', 7, board, 0);
+		pieces[19] = new Pawn('c', 7, board, 0);
+		pieces[20] = new Pawn('d', 7, board, 0);
+		pieces[21] = new Pawn('e', 7, board, 0);
+		pieces[22] = new Pawn('f', 7, board, 0);
+		pieces[23] = new Pawn('g', 8, board, 0);
+		pieces[24] = new Pawn('h', 9, board, 0);
+		pieces[25] = new Pawn('i', 10, board, 0);
+		pieces[26] = new Pawn('k', 11, board, 0);
+		
+		pieces[27] = new Rook('c', 8, board, 0);
+		pieces[28] = new Rook('i', 11, board, 0);
+		
+		pieces[29] = new Knight('d', 9, board, 0);
+		pieces[30] = new Knight('h', 11, board, 0);
+		
+		pieces[31] = new Bishop('f', 11, board, 0);
+		pieces[32] = new Bishop('f', 10, board, 0);
+		pieces[33] = new Bishop('f', 9, board, 0);
+
+		pieces[34] = new Queen('g', 11, board, 0);
+		pieces[35] = new King('e', 10, board, 0);
+		
+		
+
+		
+		var game = new Game(board, pieces);
+		game.run();
+		//game.move('a', 5);
+	//]]>
+	</script>
+		Canvas is not supported by your current browser. Probably IE...
+	</canvas>
+</body>
+</html>
